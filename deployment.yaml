@@ -1,19 +1,20 @@
+# Deployment: gerencia os pods e garante que estejam rodando
 apiVersion : apps/v1
 kind: Deployment
 metadata: 
-  name: hellok8s-deployment 
+  name: hellok8s-deployment # Nome do deployment
 spec:
-  replicas: 2
+  replicas: 2 # Número de réplicas (pods)
   selector:
     matchLabels:
-      app: hellok8s 
+      app: hellok8s # Seleciona pods com o label 'app: hellok8s'
   template: 
     metadata: 
       labels:
-        app: hellok8s
+        app: hellok8s # Label usada para identificar os pods
     spec:
       containers:
-      - name: hellok8s-container
-        image: denilsondev/hello-k8s:latest
+      - name: hellok8s-container # Nome do container
+        image: denilsondev/hello-k8s:latest # Imagem Docker usada
         ports:
-        - containerPort: 80
+        - containerPort: 8080 # Porta exposta pelo container

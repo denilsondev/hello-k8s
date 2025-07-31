@@ -1,12 +1,13 @@
+# Service: expõe o app para acesso externo no cluster
 apiVersion: v1
 kind: Service
 metadata:
-  name: hellok8s-service
+  name: hellok8s-service # Nome do service
 spec:
-  type: NodePort
+  type: NodePort # Permite acesso externo via uma porta do node
   selector:
-    app: hellok8s
+    app: hellok8s # Seleciona pods com o label 'app: hellok8s'
   ports:
-  - port: 80
-    targetPort: 8080
-    nodePort: 30036
+  - port: 80 # Porta exposta pelo service
+    targetPort: 8080 # Porta do container para onde o tráfego será direcionado
+    nodePort: 30036 # Porta do node para acesso externo
