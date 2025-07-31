@@ -1,0 +1,14 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Docker
+*.tar
+*.log
+
+# VS Code
+.vscode/
