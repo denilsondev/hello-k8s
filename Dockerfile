@@ -18,6 +18,8 @@ RUN dotnet publish -c Release -o /app/publish
 FROM base AS final
 # Define o diretório de trabalho como /app
 WORKDIR /app
+# Garante que o ASP.NET rode na porta 8080
+ENV ASPNETCORE_URLS=http://+:8080
 # Copia os arquivos publicados da etapa de build para o diretório de trabalho
 COPY --from=build /app/publish .
 # Define o ponto de entrada para rodar a aplicação

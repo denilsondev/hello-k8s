@@ -16,4 +16,4 @@ spec:
       - name: hellok8s-container
         image: denilsondev/hello-k8s:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 80
