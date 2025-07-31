@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9xKCea/n+pplfLfBk0pT+Tu7JiPFWU8LZ7FrgpMCx3Q=",
+  "Source": "HelloK8s",
+  "BasePath": "_content/HelloK8s",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
